@@ -1,0 +1,15 @@
+%h1 Fake SAP Portal (logged in)
+
+%p
+  You are now logged in to this simulated SAP portal.
+  You now have a new cookie named MYSAPSSO2.
+  Now when you go to your web application,
+  the cookie will be verified with the public certificate
+  and you'll be logged in there as well.
+
+%form(method='post' action='/')
+  %input(type='submit' name='logout' value='Logout from fake SAP portal')
+
+%p
+  %a(href='http://localhost:4568')
+    Login to your app

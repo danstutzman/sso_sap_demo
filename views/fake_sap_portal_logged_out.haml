@@ -1,0 +1,24 @@
+%h1 Fake SAP Portal (logged out)
+
+%form(method='post' action='/')
+  User_id
+  %br
+  %input(type='text' name='user_id' value='12345')
+  %span (The real SAP portal asks you for email address and password, then looks up your user_id)
+  %br
+  %br
+
+  Minutes before expiration
+  %br
+  %input(type='text' name='minutes_before_expiration' value='480')
+  %span (The real SAP portal is fixed at 480 minutes = 8 hours.  This timeout is separate from the Energize timeout.)
+
+  %br
+  %br
+  %input(type='submit' name='login'
+    value='Login to fake SAP Portal and set MYSAPSSO2 cookie')
+
+  %br
+  %br
+  %a(href='http://localhost:4568')
+    Try to login to your app (it won't work)
